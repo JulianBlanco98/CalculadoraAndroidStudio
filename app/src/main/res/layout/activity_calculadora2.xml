@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    android:fitsSystemWindows="true">
+
+    <!-- Logo + Título centrado -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="24dp">
+
+        <ImageView
+            android:id="@+id/logoCalculadora"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/calculadora_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/titulo_calculadora2"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Texto Resultado + Botones Calculadora -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Resultado -->
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorFondo"
+            android:text="0"
+            android:padding="16dp"
+            android:textSize="32sp"
+            android:gravity="end"
+            android:textStyle="bold" />
+
+        <!-- Calculadora -->
+        <GridLayout
+            android:id="@+id/gridLayoutCalculadora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="4"
+            android:rowCount="5"
+            android:useDefaultMargins="true"
+            android:layout_gravity="center">
+
+            <!-- Fila 1 -->
+            <Button android:id="@+id/botonResto" android:text="%" android:backgroundTint="@color/colorBotonesOperaciones" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/botonPotencia" android:text="^" android:backgroundTint="@color/colorBotonesOperaciones" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/borrarUno" android:text="C" android:backgroundTint="@color/colorBotonesBorrado" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/borrarTodo" android:text="Reset" android:backgroundTint="@color/colorBotonesBorrado" android:textColor="@color/colorTextoBotones" />
+
+
+            <!-- Fila 2 -->
+            <Button android:id="@+id/boton7" android:text="7" android:backgroundTint="@color/colorBotonesNumeros" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/boton8" android:text="8" android:backgroundTint="@color/colorBotonesNumeros" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/boton9" android:text="9" android:backgroundTint="@color/colorBotonesNumeros" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/botonDividir" android:text="/" android:backgroundTint="@color/colorBotonesOperaciones" android:textColor="@color/colorTextoBotones" />
+
+            <!-- Fila 3 -->
+            <Button android:id="@+id/boton4" android:text="4" android:backgroundTint="@color/colorBotonesNumeros" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/boton5" android:text="5" android:backgroundTint="@color/colorBotonesNumeros" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/boton6" android:text="6" android:backgroundTint="@color/colorBotonesNumeros" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/botonMultiplicar" android:text="*" android:backgroundTint="@color/colorBotonesOperaciones" android:textColor="@color/colorTextoBotones" />
+
+            <!-- Fila 4 -->
+            <Button android:id="@+id/boton1" android:text="1" android:backgroundTint="@color/colorBotonesNumeros" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/boton2" android:text="2" android:backgroundTint="@color/colorBotonesNumeros" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/boton3" android:text="3" android:backgroundTint="@color/colorBotonesNumeros" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/botonRestar" android:text="-" android:backgroundTint="@color/colorBotonesOperaciones" android:textColor="@color/colorTextoBotones" />
+
+            <!-- Fila 5 -->
+            <Button android:id="@+id/boton0" android:text="0" android:backgroundTint="@color/colorBotonesNumeros" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/botonDecimal" android:text="." android:backgroundTint="@color/colorBotonesNumeros" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/botonResultado" android:text="=" android:backgroundTint="@color/colorBotonResultado" android:textColor="@color/colorTextoBotones" />
+            <Button android:id="@+id/botonSumar" android:text="+" android:backgroundTint="@color/colorBotonesOperaciones" android:textColor="@color/colorTextoBotones" />
+
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>
